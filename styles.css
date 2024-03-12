@@ -1,0 +1,83 @@
+:root {
+    --fg: #000;
+    --bg: #fff;
+}
+
+[data-theme="dark"] {
+    --fg: #e1e1ff;
+    --bg: #161625;
+}
+
+body {
+    margin: auto;
+    color: var(--fg);
+    background-color: var(--bg);
+    font-family: DejaVu Sans, Tahoma, Verdana, Segoe, sans-serif;
+}
+
+.title-block {
+    max-width: 300px;
+    margin: auto;
+    display: grid;
+    padding: 2em;
+    grid-template-areas:
+        "title title title"
+        "blog projects about";
+    justify-items: center;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.title-block a:any-link {
+    text-decoration: none;
+    color: var(--fg);
+}
+
+.title {
+    grid-area: title;
+    font-weight: 900;
+    font-size: 45px;
+}
+
+.blog {
+    grid-area: blog;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.about {
+    grid-area: about;
+}
+
+/* Snipped from about.css */
+
+section {
+    margin: auto;
+    max-width: 40em;
+    font-size: 1em;
+}
+
+.contact a:any-link {
+    text-decoration: none;
+    display: block;
+    color: var(--fg);
+}
+
+.contact svg {
+    display: inline-block;
+    position: relative;
+    bottom: 0.1em;
+    height: 1em;
+    vertical-align: middle;
+}
+
+.contact svg.stroked {
+    stroke: var(--fg);
+    stroke-width: 0.1em;
+}
+
+.contact svg.filled {
+    fill: var(--fg);
+}
